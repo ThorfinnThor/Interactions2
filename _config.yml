@@ -1,1 +1,5 @@
-theme: minima
+# Tell GitHub Pages not to apply any built-in theme:
+theme: null
+
+# (optional) change your site’s title  
+title: Cellular Interactions
