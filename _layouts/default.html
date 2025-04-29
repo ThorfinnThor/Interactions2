@@ -2,65 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  >
-  <meta 
-    name="description" 
-    content="Advancing safer and more effective immunotherapies through cellular interaction research."
-  >
-  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Advancing safer and more effective immunotherapies through cellular interaction research.">
+  <title>Interactions2 | Unlocking Cellular Communication</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons (Bootstrap Icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body { font-family: 'Segoe UI', sans-serif; color: #2c3e50; line-height: 1.6; }
+    h1, h2, h3 { font-weight: 700; }
+    a { text-decoration: none; }
+    .gradient-text {
+      background: linear-gradient(90deg, #4e54c8, #8f94fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #f5f7fa;
+    }
+    .hero-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.7;
+    }
+    .shape-blue { width: 400px; height: 400px; background: #4e54c8; top: -100px; right: -100px; }
+    .shape-teal { width: 300px; height: 300px; background: #22c1c3; bottom: -80px; left: -80px; }
+    /* Feature Cards */
+    .feature-card {
+      border: none;
+      border-radius: .75rem;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      transition: transform .3s;
+    }
+    .feature-card:hover { transform: translateY(-5px); }
+    .feature-icon {
+      font-size: 2rem;
+      padding: 1rem;
+      border-radius: 50%;
+      background: #eef2ff;
+      display: inline-block;
+      margin-bottom: .75rem;
+    }
+    /* Pipeline */
+    .pipeline { background: #eef2ff; border-radius: .75rem; padding: 2rem; }
+    /* Tabs */
+    .nav-tabs .nav-link { color: #6c757d; }
+    .nav-tabs .nav-link.active { color: #4e54c8; border-color: transparent; border-bottom: 3px solid #4e54c8; }
+  </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">Interactions<span class="text-warning">2</span></a>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#mainNav"
-        aria-controls="mainNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-      >
+      <a class="navbar-brand fw-bold" href="#">Interactions<span class="text-primary">2</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div 
-        class="collapse navbar-collapse justify-content-end" 
-        id="mainNav"
-      >
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pipeline">Pipeline</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- here’s where your page content goes -->
-  <main class="flex-grow-1">
-    {{ content }}
-  </main>
+  <!-- Hero -->
+  <section class="hero py-5">
+    <div class="hero-shape shape-blue"></div>
+    <div class="hero-shape shape-teal"></div>
+    <div class="container d-flex align-items-center justify-content-between" style="min-height: 70vh; position: relative;">
+      <div class="col-md-6">
+        <p class="text-uppercase text-primary mb-2">Pioneering Cell-Cell Interaction Research</p>
+        <h1 class="display-4 gradient-text mb-4">Unlocking the Language of Cells<br>for Breakthrough Therapies</h1>
+        <p class="lead mb-4">Our advanced technologies decode cellular communication to develop next-generation therapeutics for complex diseases.</p>
+        <a href="#features" class="btn btn-gradient me-3 px-4 py-2" style="background: linear-gradient(90deg,#4e54c8,#8f94fb); color: #fff; border:none; border-radius: .5rem;">Our Technology</a>
+        <a href="#contact" class="btn btn-outline-primary px-4 py-2">Request a Demo</a>
+      </div>
+      <!-- Hero visual placeholder -->
+      <div class="col-md-5 text-center">
+        <!-- Could replace with SVG or image -->
+        <div class="position-relative" style="width:300px; height:300px; margin:auto; border:2px solid rgba(78,84,200,0.5); border-radius:50%;">
+          <i class="bi bi-microscope feature-icon position-absolute top-0 start-50 translate-middle" style="background:#fff;"></i>
+          <i class="bi bi-lightning-charge feature-icon position-absolute top-50 start-0 translate-middle" style="background:#fff;"></i>
+          <i class="bi bi-database feature-icon position-absolute bottom-0 start-50 translate-middle" style="background:#fff;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center py-3 mt-auto">
-    &copy; 2025 Your Spin-Off Name. All rights reserved.
-  </footer>
+  <!-- Features -->
+  <section id="features" class="py-5">
+    <div class="container mb-4 text-center">
+      <h2 class="mb-3">Our Core Pillars</h2>
+      <p class="text-muted">Founded by leading cell biologists and data scientists, we're decoding cellular communication patterns to revolutionize disease treatment.</p>
+    </div>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <i class="bi bi-lightbulb-fill feature-icon text-warning"></i>
+            <h5>Our Mission</h5>
+            <p>To decode and harness the complex language of cellular interactions, developing transformative therapies for previously intractable diseases.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <i class="bi bi-award-fill feature-icon text-purple"></i>
+            <h5>Our Expertise</h5>
+            <p>Our multidisciplinary team combines cutting-edge cellular biology with advanced computational techniques to pioneer new therapeutic approaches.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <i class="bi bi-check-circle-fill feature-icon text-success"></i>
+            <h5>Our Approach</h5>
+            <p>By mapping the intricate networks of cell-cell interactions, we identify novel therapeutic targets with unprecedented precision and efficacy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Bootstrap 5 JS Bundle -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-</body>
-</html>
+  <!-- Research Areas -->
+  <section id="research" class="py-5 bg-white">
+    <div class="container text-center mb-4">
+      <h2>Research Areas</h2>
+      <hr class="mx-auto" style="width: 60px; border-top: 3px solid #4e54c8;">
+      <p class="text-muted">Our research focuses on decoding complex cellular communication networks in key therapeutic areas with significant unmet medical needs.</p>
+    </div>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card feature-card p-4 h-100">
+            <i class="bi bi-brain feature-icon text-purple"></i>
+            <h6>Neurodegenerative Disorders</h6>
+            <p>Mapping glial-neuronal interactions to develop therapies for Alzheimer\'s, Parkinson\'s and other neurodegenerative diseases.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card p-4 h-100">
+            <i class="bi bi-shield-lock feature-icon text-secondary"></i>
+            <h6>Immuno-Oncology</h6>
+            <p>Decoding tumor microenvironment signaling to enhance immune cell recognition and elimination of cancer cells.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card p-4 h-100">
+            <i class="bi bi-heart-fill feature-icon text-teal"></n
